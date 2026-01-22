@@ -1,3 +1,3 @@
-rev=2412
-ts=1769070009
-scope=serial-port
+rev=2413
+ts=1769070045
+scope=hid-poll
