@@ -4,7 +4,7 @@ import {
   parseSession,
   points,
   summarize,
-} from './session.mjs';
+} from './session.mjs?v=0.2.0';
 
 const $ = (selector) => document.querySelector(selector);
 const slider = $('#sample');

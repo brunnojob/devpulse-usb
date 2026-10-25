@@ -9,11 +9,12 @@ As verificações automáticas ficam em [GitHub Actions](https://github.com/brun
 | Python | 14 testes: contrato, alertas, taxas, sensor de rede ausente, falha serial, backoff, captura real, CLI e proteção contra sobrescrita |
 | Sessões web | 6 testes: parser, limites, séries inválidas, média com tempo irregular, captura única e escala temporal |
 | Enquadramento C++ | Limite do buffer, CRLF, descarte de overflow, recuperação e múltiplos pacotes |
+| Sketch Arduino | Compilação para ESP32-C6: core 3.3.2, ArduinoJson 7.4.2 e Adafruit ST7735/ST7789 1.11.0; perfil temporário de teste |
 | Qualidade | Ruff e Prettier; sintaxe JavaScript |
 
 O CI verifica o agente em Python 3.10 e 3.12, em Windows, Linux e macOS. As falhas de serial são simuladas. O parser C++ roda com sanitizers no Linux. Os testes do leitor web são executados em Node e não comprovam a interação no navegador.
 
-A compilação completa do sketch e sua execução física continuam pendentes de configuração da placa. O perfil padrão bloqueia a compilação até a identificação do hardware. A foto original mostra os dados do próprio ESP32, não a execução deste firmware com dados do PC.
+O sketch compilou no CI com um perfil temporário para ESP32-C6. O script `tools/check_firmware.py` cria esse perfil em uma cópia temporária; os pinos não identificam a placa da foto e o binário não é uma distribuição para gravação. A configuração e execução física continuam pendentes. O perfil padrão bloqueia a compilação até a identificação do hardware. A foto original mostra os dados do próprio ESP32, não a execução deste firmware com dados do PC.
 
 ## Reproduzir uma captura
 

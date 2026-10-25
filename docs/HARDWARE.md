@@ -27,6 +27,10 @@ O sketch usa Adafruit ST7789 sobre SPI. É necessário **confirmar esse controla
 
 Os valores **172 × 320 / rotação 1 são placeholders**, não uma identificação da tela da foto. Alguns painéis exigem offsets específicos além dessas dimensões.
 
+## Compilação de verificação
+
+O CI usa core ESP32 3.3.2, ArduinoJson 7.4.2 e Adafruit ST7735/ST7789 1.11.0. `tools/check_firmware.py` cria uma cópia temporária com um perfil para o compilador. Os pinos desse teste não identificam uma placa suportada; não use esse perfil para gravação. O `board_config.h` original permanece bloqueado até a configuração física.
+
 ## Conexão USB
 
 Para USB nativo do ESP32-C6, habilite **USB CDC On Boot**. Para uma ponte USB/UART, siga a configuração do fabricante e confira se drivers adicionais são necessários. Use cabo que transporte dados. Algumas placas reiniciam ao abrir a porta.

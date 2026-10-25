@@ -58,7 +58,7 @@ Troque `COM5` pela porta listada. O monitor serial da IDE deve estar fechado. Se
 
 ## O que está validado
 
-Os testes verificam o agente, cenários de falha serial, o enquadramento C++ e o leitor de sessões. O CI executa o Python em Windows, Linux e macOS. Isso **não comprova funcionamento USB na placa da foto**: identificação, configuração e teste físico continuam pendentes. [Escopo e roteiro de reprodução →](docs/VALIDATION.md)
+Os testes verificam o agente, cenários de falha serial, o enquadramento C++ e o leitor de sessões. O CI executa o Python em Windows, Linux e macOS e compila o `.ino` para ESP32-C6 com um perfil temporário de teste. Isso **não comprova funcionamento USB na placa da foto**: identificação, configuração e teste físico continuam pendentes. [Escopo e roteiro de reprodução →](docs/VALIDATION.md)
 
 Sem leitura de GPU, temperatura ou FPS nesta versão. Sem Wi-Fi, serviço de rede ou execução de comandos recebidos do dispositivo. Não há confirmação de entrega dos pacotes. A taxa de rede agrega interfaces; “disco” significa ocupação do volume, não atividade de I/O.
 
