@@ -43,7 +43,8 @@ test('one-sample session has a meaningful zero-duration summary', () => {
   assert.equal(result.duration, 0);
   assert.equal(points([row(10, 50)], 'cpu'), '450.00,90.00');
 });
-test('chart coordinates follow elapsed time rather than record index', () => {
+test('chart coordinates use elapsed time and share a scale when comparing sessions', () => {
+  assert.equal(points([row(0, 0), row(2, 100)], 'cpu', 100, 100, 10), '0.00,100.00 20.00,0.00');
   assert.equal(
     points([row(0, 0), row(1, 50), row(10, 100)], 'cpu', 100, 100),
     '0.00,100.00 10.00,50.00 100.00,0.00'

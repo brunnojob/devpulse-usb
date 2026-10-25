@@ -1174,3 +1174,15 @@ footer {
   display: block;
   margin-top: 4px;
 }
+
+.hero > *,
+.build-grid > *,
+.engineering > * {
+  min-width: 0;
+}
+
+@media (max-width: 700px) {
+  h1 {
+    font-size: clamp(52px, 16vw, 110px);
+  }
+}
