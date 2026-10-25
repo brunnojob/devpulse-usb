@@ -1,25 +1,399 @@
 <!doctype html>
 <html lang="pt-BR">
-<head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="DevPulse USB: um painel físico para acompanhar seu computador com ESP32 e telemetria local por USB.">
-<meta name="theme-color" content="#0a0e11"><title>DevPulse USB — Sua máquina, à vista.</title>
-<link rel="stylesheet" href="assets/site.css"><script src="assets/site.js" defer></script>
-</head>
-<body>
-<header class="nav wrap"><a class="brand" href="#"><span class="mark">D<span>›</span></span> DevPulse<span class="muted">USB</span></a><nav aria-label="Navegação"><a href="#como-funciona">Como funciona</a><a href="#comecar">Começar</a><a class="repo" href="https://github.com/brunnojob/devpulse-usb">GitHub ↗</a></nav></header>
-<main>
-<section class="hero wrap"><div><div class="eyebrow"><span class="dot"></span> HARDWARE ABERTO · TELEMETRIA LOCAL</div><h1>Sua máquina.<br>Fora da <span>janela.</span></h1><p class="lead">CPU, memória e rede em um painel físico na sua mesa. Um ESP32, um cabo USB e o controle dos seus dados.</p><div class="actions"><a class="button primary" href="#comecar">Montar meu painel <span>↗</span></a><a class="button" href="https://github.com/brunnojob/devpulse-usb">Explorar o código</a></div><div class="hero-meta">ARDUINO .INO <span>/</span> PYTHON <span>/</span> USB SERIAL</div></div><figure class="hardware"><div class="photo-top"><span>01 / HARDWARE</span><span class="status">PROTÓTIPO</span></div><img src="assets/prototype-reference.png" alt="Placa com conexão USB e tela mostrando ESP32-C6 SYSTEM INFO"><figcaption>Registro do protótipo do autor. A foto mostra dados do ESP32; a integração com o PC ainda requer validação na placa.</figcaption><div class="photo-foot"><span>SEM WI-FI. SEM NUVEM.</span><span>brunnodev</span></div></figure></section>
-<div class="strip"><div class="wrap"><span>01 cabo para dados + energia</span><span>100% local no código</span><span>MIT · código aberto</span><span>Sem conta</span></div></div>
-<section id="como-funciona" class="wrap section"><div class="section-top"><div><div class="eyebrow">O FLUXO</div><h2>Do seu PC para a mesa.</h2></div><p>O computador coleta. O USB transporta.<br>O ESP32 transforma números em informação.</p></div><div class="steps"><article><span class="step-no">01</span><h3>Coletar</h3><p>O agente Python lê CPU, RAM, ocupação do volume e tráfego agregado de rede usando psutil.</p><code>python agent.py --port COM5</code></article><article><span class="step-no">02</span><h3>Transportar</h3><p>Pacotes JSON versionados via serial. O mesmo cabo USB alimenta a placa e leva as métricas.</p><code>JSON + LF / 115200 baud</code></article><article><span class="step-no">03</span><h3>Acompanhar</h3><p>O firmware exibe métricas e alerta após dez segundos de CPU ou RAM acima de 90%.</p><code>PC → USB → ESP32 → tela</code></article></div></section>
-<section class="wrap section demo-section"><div><div class="eyebrow">EXPLORE A INTERFACE</div><h2>Um olhar.<br>O estado da máquina.</h2><p class="body-copy">Experimente a representação do painel. Os valores aqui são ilustrativos: o site não lê as métricas do seu computador.</p><label class="slider-label" for="load">Carga ilustrativa da CPU <output id="load-out" for="load">34%</output></label><input id="load" type="range" min="0" max="100" value="34"><p class="small">No hardware, o alerta exige dez segundos contínuos. Nesta prévia, a cor apenas ilustra o limiar.</p></div><div class="screen-shell"><div class="screen"><div class="screen-head">DevPulse USB <span>DEMO</span></div><div class="metric"><span>CPU</span><div class="track"><i id="cpu-bar" style="width:34%"></i></div><strong id="cpu-value">34%</strong></div><div class="metric"><span>RAM</span><div class="track"><i style="width:58%"></i></div><strong>58%</strong></div><div class="metric"><span>DISCO</span><div class="track"><i style="width:44%"></i></div><strong>44%</strong></div><div class="network"><span>↓ RX <b>22.4</b> KiB/s</span><span>↑ TX <b>3.1</b> KiB/s</span></div><div class="screen-bottom"><span id="demo-state">CARGA ILUSTRATIVA NORMAL</span><span>LOCAL</span></div></div><div class="device-label">USB TELEMETRY / v0.1 PROTOTYPE</div></div></section>
-<section id="comecar" class="wrap section"><div class="section-top"><div><div class="eyebrow">PRIMEIROS PASSOS</div><h2>Comece pelo software.</h2></div><p>Você pode experimentar a coleta real no terminal<br>antes de conectar qualquer placa.</p></div><div class="setup-grid"><div class="terminal"><div class="terminal-head"><span>QUICK START</span><div role="group" aria-label="Sistema operacional"><button class="os active" data-os="windows" aria-pressed="true">Windows</button><button class="os" data-os="unix" aria-pressed="false">Linux / macOS</button></div></div><pre><code id="commands">git clone https://github.com/brunnojob/devpulse-usb.git
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Um painel USB aberto para o seu PC. Grave CPU, RAM e rede, inspecione sessões localmente e construa seu monitor com ESP32."
+    />
+    <meta name="theme-color" content="#e9e6df" />
+    <meta property="og:title" content="DevPulse USB — Coloque sua máquina em evidência." />
+    <meta
+      property="og:description"
+      content="ESP32 + Python. Telemetria por USB, captura de sessões e análise local no navegador."
+    />
+    <meta property="og:type" content="website" />
+    <title>DevPulse USB / Uma bancada para observar seu PC</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="assets/site.css" />
+    <script type="module" src="assets/site.js"></script>
+  </head>
+  <body>
+    <a class="skip" href="#conteudo">Pular para o conteúdo</a>
+    <header class="masthead wrap">
+      <a class="brand" href="#" aria-label="DevPulse USB, início"
+        ><span class="brand-symbol" aria-hidden="true">dp<span>_</span></span
+        ><span>DevPulse USB<small>um projeto brunnodev</small></span></a
+      >
+      <nav aria-label="Navegação principal">
+        <a href="#bancada">Bancada</a><a href="#montagem">Montagem</a
+        ><a href="https://github.com/brunnojob/devpulse-usb"
+          >Código aberto <span aria-hidden="true">↗</span></a
+        >
+      </nav>
+      <span class="edition">CADERNO 002 / OUT. 2026</span>
+    </header>
+    <main id="conteudo">
+      <section class="hero wrap" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="overline">
+            <span class="signal" aria-hidden="true"></span> INSTRUMENTOS PARA QUEM PROGRAMA
+          </p>
+          <h1 id="hero-title">
+            MÁQUINA<br />EM <em>EVI-<br />DÊNCIA.</em>
+          </h1>
+          <p class="intro">
+            Um painel na mesa. Um cabo USB.<br />CPU, memória e rede do seu PC, com um caminho
+            aberto entre a leitura e o pixel.
+          </p>
+          <div class="hero-actions">
+            <a class="action action-dark" href="#bancada"
+              >Experimentar a bancada <span aria-hidden="true">↘</span></a
+            ><a class="text-link" href="https://github.com/brunnojob/devpulse-usb"
+              >Ler o código ↗</a
+            >
+          </div>
+          <p class="hero-footnote">ESP32 · ARDUINO .INO · PYTHON · LICENÇA MIT</p>
+        </div>
+        <figure class="specimen">
+          <div class="specimen-top">
+            <span>FIG. 01 — O PONTO DE PARTIDA</span><span class="cross" aria-hidden="true">+</span>
+          </div>
+          <div class="photo-stage">
+            <div class="registration reg-a" aria-hidden="true"></div>
+            <div class="registration reg-b" aria-hidden="true"></div>
+            <img
+              src="assets/prototype-reference.png"
+              alt="Protótipo USB do autor, com tela exibindo informações internas de um ESP32-C6"
+              width="272"
+              height="153"
+            />
+            <div class="photo-tag">
+              <span>MCU</span><strong>ESP32-C6</strong><span>IDENTIFICADO NA TELA</span>
+            </div>
+          </div>
+          <figcaption>
+            <span class="caption-number">01 /</span>
+            <p>
+              Foto do protótipo do autor, exibindo os dados do próprio ESP32. A integração deste
+              firmware com a placa ainda precisa de configuração e teste físico.
+            </p>
+          </figcaption>
+          <div class="specimen-foot"><span>ALIMENTAÇÃO + DADOS</span><span>USB SERIAL</span></div>
+        </figure>
+      </section>
+      <section class="facts wrap" aria-label="Parâmetros padrão">
+        <div>
+          <strong>01<span>cabo</span></strong>
+          <p>Energia e dados pelo USB</p>
+        </div>
+        <div>
+          <strong>1<span>segundo</span></strong>
+          <p>Intervalo padrão de coleta</p>
+        </div>
+        <div>
+          <strong>10<span>segundos</span></strong>
+          <p>Em pelo menos 90% para alertar</p>
+        </div>
+        <div>
+          <strong>05<span>segundos</span></strong>
+          <p>Sem pacote: dados desatualizados</p>
+        </div>
+      </section>
+
+      <section id="bancada" class="bench" aria-labelledby="bench-title">
+        <div class="wrap">
+          <div class="section-heading">
+            <div>
+              <p class="overline">01 / BANCADA DE SESSÕES</p>
+              <h2 id="bench-title">Faça os números<br />contarem uma história.</h2>
+            </div>
+            <div class="section-description">
+              <p>
+                Grave uma tarefa no PC. Abra a captura aqui. Percorra as leituras ou compare duas
+                sessões.
+              </p>
+              <p class="privacy-note">
+                <span aria-hidden="true">↳</span> O arquivo é lido neste navegador, sem upload.
+              </p>
+            </div>
+          </div>
+          <div class="instrument">
+            <div class="instrument-toolbar">
+              <div class="instrument-title">
+                <span class="signal" aria-hidden="true"></span>
+                <span id="source-label">EXEMPLO ILUSTRATIVO</span>
+              </div>
+              <div class="instrument-actions">
+                <label class="import-button" for="session-file"
+                  >Abrir .ndjson <span aria-hidden="true">↥</span></label
+                ><input
+                  id="session-file"
+                  class="file-input"
+                  type="file"
+                  accept=".ndjson,.jsonl,application/x-ndjson,text/plain"
+                  multiple
+                /><button id="example" type="button">Usar exemplo</button>
+              </div>
+            </div>
+            <p class="session-message" id="session-message" role="status">
+              Dados sintéticos para explorar a interface. Nenhuma leitura do seu computador.
+            </p>
+            <div class="scope-head">
+              <div class="scope-legend">
+                <span><i class="legend-a"></i> CPU · A</span
+                ><span><i class="legend-ram"></i> RAM · A</span
+                ><span id="legend-b" hidden><i class="legend-b"></i> CPU · B</span>
+              </div>
+              <span class="scope-unit">UTILIZAÇÃO (%) / TEMPO DECORRIDO (s)</span>
+            </div>
+            <div class="scope-wrap">
+              <div class="y-labels" aria-hidden="true">
+                <span>100</span><span>50</span><span>0</span>
+              </div>
+              <svg
+                id="scope"
+                viewBox="0 0 900 180"
+                role="img"
+                aria-labelledby="scope-title scope-desc"
+                preserveAspectRatio="none"
+              >
+                <title id="scope-title">CPU e RAM ao longo da sessão</title>
+                <desc id="scope-desc">
+                  Explore as amostras pelo controle abaixo. Os valores selecionados e o resumo
+                  também estão disponíveis em texto.
+                </desc>
+                <defs>
+                  <pattern id="grid" width="90" height="45" patternUnits="userSpaceOnUse">
+                    <path d="M 90 0 L 0 0 0 45" fill="none" stroke="#35403b" stroke-width="0.6" />
+                  </pattern>
+                </defs>
+                <rect width="900" height="180" fill="url(#grid)" />
+                <polyline
+                  id="trace-ram"
+                  fill="none"
+                  stroke="#a8c4ae"
+                  stroke-width="1.7"
+                  vector-effect="non-scaling-stroke"
+                />
+                <polyline
+                  id="trace-a"
+                  fill="none"
+                  stroke="#f5774f"
+                  stroke-width="2"
+                  vector-effect="non-scaling-stroke"
+                />
+                <polyline
+                  id="trace-b"
+                  fill="none"
+                  stroke="#d7c887"
+                  stroke-width="1.6"
+                  stroke-dasharray="5 4"
+                  vector-effect="non-scaling-stroke"
+                />
+                <line
+                  id="cursor"
+                  x1="0"
+                  y1="0"
+                  x2="0"
+                  y2="180"
+                  stroke="#ece6da"
+                  stroke-opacity="0.6"
+                  vector-effect="non-scaling-stroke"
+                />
+              </svg>
+            </div>
+            <div class="x-labels" aria-hidden="true">
+              <span>0 s</span><span id="half-time">45 s</span><span id="end-time">90 s</span>
+            </div>
+            <div class="scrubber">
+              <label for="sample"
+                >Percorrer sessão A <output id="sample-time" for="sample">0.0 s</output></label
+              ><input id="sample" type="range" min="0" max="90" value="0" step="1" />
+            </div>
+            <div class="readouts" aria-live="off">
+              <div><span>CPU / A</span><strong id="read-cpu">—</strong></div>
+              <div><span>RAM / A</span><strong id="read-ram">—</strong></div>
+              <div><span>RX / A</span><strong id="read-rx">—</strong></div>
+              <div><span>TX / A</span><strong id="read-tx">—</strong></div>
+              <div><span>ALERTA / A</span><strong id="read-alert">—</strong></div>
+            </div>
+            <div class="summary-head">
+              <span>RESUMO DA CAPTURA</span><span id="sample-count">91 amostras</span>
+            </div>
+            <div class="table-scroll">
+              <table class="summary-table">
+                <caption class="sr-only">
+                  Resumo e comparação das sessões carregadas
+                </caption>
+                <thead>
+                  <tr>
+                    <th scope="col">SESSÃO</th>
+                    <th scope="col">DURAÇÃO</th>
+                    <th scope="col">CPU MÉDIA</th>
+                    <th scope="col">PICO CPU</th>
+                    <th scope="col">PICO RAM</th>
+                    <th scope="col">AMOSTRAS EM ALERTA</th>
+                  </tr>
+                </thead>
+                <tbody id="session-summary"></tbody>
+              </table>
+            </div>
+            <p id="analysis-note" class="analysis-note">
+              A média considera o tempo entre as amostras. A comparação não isola a causa de
+              lentidão.
+            </p>
+          </div>
+          <div class="bench-foot">
+            <p>
+              Até dois arquivos, 4 MiB e 20.000 amostras por sessão. O site não recebe dados ao vivo
+              da sua máquina.
+            </p>
+            <details>
+              <summary>Experimentar colando NDJSON</summary>
+              <label class="sr-only" for="session-text">Captura NDJSON</label
+              ><textarea
+                id="session-text"
+                spellcheck="false"
+                placeholder='{"v":1,"t":1,"cpu":34,"ram":58,"disk":44,"rx":22.4,"tx":3.1,"alert":"OK"}'
+                maxlength="500000"
+              ></textarea
+              ><button id="paste-session" class="action" type="button">Analisar texto</button>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section id="montagem" class="build wrap" aria-labelledby="build-title">
+        <div class="section-heading">
+          <div>
+            <p class="overline">02 / DO CHECKOUT À BANCADA</p>
+            <h2 id="build-title">Comece sem a placa.<br />Depois, leve para a mesa.</h2>
+          </div>
+          <p class="section-description">
+            O agente coleta métricas reais mesmo sem hardware conectado. Uma captura de 60 segundos
+            já permite experimentar a análise acima.
+          </p>
+        </div>
+        <div class="build-grid">
+          <div class="recipe">
+            <div class="recipe-head">
+              <span>TERMINAL / PYTHON 3.10+</span>
+              <div role="group" aria-label="Sistema operacional">
+                <button class="os active" data-os="windows" type="button" aria-pressed="true">
+                  Windows</button
+                ><button class="os" data-os="unix" type="button" aria-pressed="false">
+                  Linux / macOS
+                </button>
+              </div>
+            </div>
+            <pre><code id="commands">git clone https://github.com/brunnojob/devpulse-usb.git
 cd devpulse-usb
 python -m venv .venv
 .venv\Scripts\Activate.ps1
 python -m pip install -r requirements.txt
-python agent.py --stdout</code></pre><button id="copy" class="copy">Copiar comandos</button><span id="copy-status" role="status"></span></div><aside class="setup-note"><span class="note-label">ANTES DE GRAVAR</span><h3>Confirme sua placa.</h3><p>A foto não identifica a pinagem ou o controlador da tela. O firmware inclui um perfil ST7789 que precisa ser confirmado e configurado.</p><p>O agente foi testado neste ambiente; compilação e execução física do firmware ainda estão pendentes.</p><a href="https://github.com/brunnojob/devpulse-usb#firmware">Guia de hardware ↗</a><a href="https://github.com/brunnojob/devpulse-usb/blob/main/docs/VALIDATION.md">Estado de validação ↗</a></aside></div></section>
-<section class="wrap section roadmap"><div><div class="eyebrow">CONSTRUÍDO EM ABERTO</div><h2>Uma base para ir além.</h2><p class="body-copy">O próximo passo é tornar o painel uma ferramenta de diagnóstico para quem desenvolve. Estas funcionalidades são propostas para o futuro.</p></div><ol><li><span>01</span><div><h3>Tempo de build por projeto</h3><p>Comparar duração e consumo entre execuções.</p></div><b>PLANEJADO</b></li><li><span>02</span><div><h3>Sensores especializados</h3><p>GPU e temperatura com provedores específicos.</p></div><b>PLANEJADO</b></li><li><span>03</span><div><h3>Mais placas verificadas</h3><p>Perfis reproduzíveis e renderização otimizada.</p></div><b>PLANEJADO</b></li></ol></section>
-<section class="wrap final-cta"><div><div class="eyebrow">FAÇA PARTE</div><h2>Seu próximo projeto<br>pode sair da tela.</h2></div><a class="button primary" href="https://github.com/brunnojob/devpulse-usb">Ver repositório <span>↗</span></a></section>
-</main><footer class="wrap"><a class="brand" href="#">DevPulse USB</a><span>Um projeto de <a href="https://brunnodev.store">brunnodev ↗</a></span><span>Código MIT · Em desenvolvimento</span></footer>
-</body></html>
+python agent.py --record sessao.ndjson --duration 60</code></pre>
+            <div class="recipe-bottom">
+              <button id="copy" type="button">Copiar comandos</button
+              ><span id="copy-status" role="status"></span>
+            </div>
+            <p class="recipe-note">
+              Depois, abra <code>sessao.ndjson</code> na bancada. Para o painel físico:
+              <code>python agent.py --port COM5</code> (use a porta da sua placa).
+            </p>
+          </div>
+          <ol class="assembly">
+            <li>
+              <span>01</span>
+              <div>
+                <h3>Escolha a leitura.</h3>
+                <p>
+                  CPU, RAM, ocupação de um volume e tráfego agregado. A coleta usa psutil; não há
+                  servidor rodando.
+                </p>
+              </div>
+            </li>
+            <li>
+              <span>02</span>
+              <div>
+                <h3>Confirme o hardware.</h3>
+                <p>
+                  O perfil ST7789 é configurável. Controlador, pinos, dimensões e offsets precisam
+                  corresponder à sua placa.
+                </p>
+                <a href="https://github.com/brunnojob/devpulse-usb/blob/main/docs/HARDWARE.md"
+                  >Guia de configuração ↗</a
+                >
+              </div>
+            </li>
+            <li>
+              <span>03</span>
+              <div>
+                <h3>Conecte por USB.</h3>
+                <p>
+                  JSON por linha, porta explícita e reconexão com espera progressiva. A tela marca
+                  dados desatualizados após cinco segundos.
+                </p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="engineering wrap" aria-labelledby="engineering-title">
+        <div class="engineering-title">
+          <p class="overline">03 / DECISÕES QUE DÁ PARA INSPECIONAR</p>
+          <h2 id="engineering-title">Código aberto.<br />Limites também.</h2>
+          <a class="text-link" href="https://github.com/brunnojob/devpulse-usb/actions"
+            >Conferir os testes ↗</a
+          >
+        </div>
+        <div class="engineering-notes">
+          <article>
+            <span>TRANSPORTE</span>
+            <h3>Reconectar sem parar a captura.</h3>
+            <p>
+              As tentativas de reconexão são agendadas. Escritas têm timeout; um envio parcial fecha
+              a porta e a próxima conexão começa com um delimitador.
+            </p>
+          </article>
+          <article>
+            <span>INTEGRIDADE</span>
+            <h3>O pacote tem fronteira.</h3>
+            <p>
+              Limite de 255 bytes, validação de métricas e versão do protocolo. O parser C++
+              descarta uma linha longa e recupera a próxima.
+            </p>
+          </article>
+          <article>
+            <span>ESTADO ATUAL</span>
+            <h3>O que já foi verificado.</h3>
+            <p>
+              Testes do agente, falhas simuladas de serial, parser C++ e análise de sessões. A placa
+              da foto ainda aguarda configuração e validação física.
+            </p>
+            <a href="https://github.com/brunnojob/devpulse-usb/blob/main/docs/VALIDATION.md"
+              >Ver escopo da validação ↗</a
+            >
+          </article>
+        </div>
+      </section>
+      <section class="closing wrap">
+        <div class="closing-stamp" aria-hidden="true">dp_</div>
+        <div>
+          <p class="overline">CONSTRUÍDO EM ABERTO / v0.2</p>
+          <h2>Da próxima vez que o PC pesar,<br />registre o que aconteceu.</h2>
+          <a class="action action-dark" href="https://github.com/brunnojob/devpulse-usb"
+            >Explorar o repositório <span aria-hidden="true">↗</span></a
+          >
+        </div>
+      </section>
+    </main>
+    <footer class="wrap">
+      <span>DevPulse USB / <a href="https://brunnodev.store">brunnodev ↗</a></span
+      ><span>Hardware configurável · Software local · MIT</span
+      ><a href="https://github.com/brunnojob/devpulse-usb/issues">Encontrou um problema? ↗</a>
+    </footer>
+  </body>
+</html>

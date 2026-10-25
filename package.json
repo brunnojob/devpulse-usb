@@ -1,0 +1,14 @@
+{
+  "name": "devpulse-usb",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/session.test.mjs",
+    "format": "prettier --write index.html assets/site.css assets/site.js assets/session.mjs assets/favicon.svg tests/session.test.mjs .github/workflows/tests.yml",
+    "format:check": "prettier --check index.html assets/site.css assets/site.js assets/session.mjs assets/favicon.svg tests/session.test.mjs .github/workflows/tests.yml"
+  },
+  "devDependencies": {
+    "prettier": "3.6.2"
+  }
+}
