@@ -782,3 +782,5 @@
 
 * [2026-10-30 02:51:40] clean applied to type hints (Ref: cfb868ff-41)
 
+* [2026-10-30 02:51:41] clean applied to internal configs (Ref: cfb868ff-42)
+
