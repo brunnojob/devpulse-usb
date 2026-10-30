@@ -156,3 +156,5 @@
 
 * [2026-10-29 21:31:37] clean applied to module structure (Ref: 68da01c0-28)
 
+* [2026-10-29 21:31:37] improve applied to internal configs (Ref: 68da01c0-29)
+
