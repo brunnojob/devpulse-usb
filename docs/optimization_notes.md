@@ -172,3 +172,5 @@
 
 * [2026-10-29 21:31:39] format applied to inline comments (Ref: 68da01c0-36)
 
+* [2026-10-29 21:31:39] clean applied to module structure (Ref: 68da01c0-37)
+
