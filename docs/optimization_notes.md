@@ -532,3 +532,5 @@
 
 * [2026-10-29 21:33:34] optimize applied to internal configs (Ref: cf2af4a1-16)
 
+* [2026-10-29 21:33:35] clean applied to utilities (Ref: cf2af4a1-17)
+
