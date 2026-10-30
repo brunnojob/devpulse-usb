@@ -562,3 +562,5 @@
 
 * [2026-10-29 21:33:41] format applied to utilities (Ref: cf2af4a1-31)
 
+* [2026-10-29 21:33:42] clean applied to internal configs (Ref: cf2af4a1-32)
+
