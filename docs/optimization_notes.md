@@ -442,3 +442,5 @@
 
 * [2026-10-29 21:33:11] update applied to utilities (Ref: 48fcd25d-21)
 
+* [2026-10-29 21:33:11] improve applied to inline comments (Ref: 48fcd25d-22)
+
