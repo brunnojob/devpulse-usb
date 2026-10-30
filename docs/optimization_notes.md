@@ -1180,3 +1180,5 @@
 
 * [2026-10-30 02:53:19] update applied to internal configs (Ref: 7c415016-40)
 
+* [2026-10-30 02:53:19] improve applied to internal configs (Ref: 7c415016-41)
+
