@@ -676,3 +676,5 @@
 
 * [2026-10-30 02:51:15] improve applied to internal configs (Ref: 2051a3e1-38)
 
+* [2026-10-30 02:51:16] format applied to inline comments (Ref: 2051a3e1-39)
+
