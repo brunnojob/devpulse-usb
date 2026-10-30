@@ -38,3 +38,5 @@
 
 * [2026-10-29 21:31:01] update applied to utilities (Ref: d9b3d005-19)
 
+* [2026-10-29 21:31:01] improve applied to internal configs (Ref: d9b3d005-20)
+
