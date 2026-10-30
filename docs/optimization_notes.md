@@ -754,3 +754,5 @@
 
 * [2026-10-30 02:51:37] clean applied to inline comments (Ref: cfb868ff-27)
 
+* [2026-10-30 02:51:37] format applied to internal configs (Ref: cfb868ff-28)
+
