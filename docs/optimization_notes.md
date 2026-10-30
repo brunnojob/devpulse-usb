@@ -622,3 +622,5 @@
 
 * [2026-10-30 02:51:10] clean applied to utilities (Ref: 2051a3e1-11)
 
+* [2026-10-30 02:51:11] improve applied to module structure (Ref: 2051a3e1-12)
+
