@@ -444,3 +444,5 @@
 
 * [2026-10-29 21:33:11] improve applied to inline comments (Ref: 48fcd25d-22)
 
+* [2026-10-29 21:33:11] format applied to internal configs (Ref: 48fcd25d-23)
+
