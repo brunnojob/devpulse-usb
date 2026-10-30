@@ -1082,3 +1082,5 @@
 
 * [2026-10-30 02:52:53] improve applied to internal configs (Ref: 1e5503e9-41)
 
+* [2026-10-30 02:52:54] format applied to inline comments (Ref: 1e5503e9-42)
+
