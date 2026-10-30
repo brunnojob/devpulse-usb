@@ -282,3 +282,5 @@
 
 * [2026-10-29 21:32:07] format applied to utilities (Ref: 04e287a7-41)
 
+* [2026-10-29 21:32:07] format applied to internal configs (Ref: 04e287a7-42)
+
