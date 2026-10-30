@@ -800,3 +800,5 @@
 
 * [2026-10-30 02:51:42] optimize applied to type hints (Ref: cfb868ff-50)
 
+* [2026-10-30 02:51:53] format applied to internal configs (Ref: b889b6cf-1)
+
