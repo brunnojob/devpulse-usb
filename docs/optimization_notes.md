@@ -128,3 +128,5 @@
 
 * [2026-10-29 21:31:35] optimize applied to internal configs (Ref: 68da01c0-14)
 
+* [2026-10-29 21:31:35] format applied to module structure (Ref: 68da01c0-15)
+
