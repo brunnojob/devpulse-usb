@@ -380,3 +380,5 @@
 
 * [2026-10-29 21:32:43] clean applied to inline comments (Ref: 320bd28b-40)
 
+* [2026-10-29 21:32:44] improve applied to inline comments (Ref: 320bd28b-41)
+
