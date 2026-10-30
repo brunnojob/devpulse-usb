@@ -198,3 +198,5 @@
 
 * [2026-10-29 21:31:42] clean applied to internal configs (Ref: 68da01c0-49)
 
+* [2026-10-29 21:31:42] clean applied to utilities (Ref: 68da01c0-50)
+
