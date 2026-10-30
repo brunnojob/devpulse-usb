@@ -348,3 +348,5 @@
 
 * [2026-10-29 21:32:40] clean applied to module structure (Ref: 320bd28b-24)
 
+* [2026-10-29 21:32:40] format applied to type hints (Ref: 320bd28b-25)
+
