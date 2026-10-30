@@ -288,3 +288,5 @@
 
 * [2026-10-29 21:32:08] update applied to internal configs (Ref: 04e287a7-44)
 
+* [2026-10-29 21:32:08] improve applied to utilities (Ref: 04e287a7-45)
+
