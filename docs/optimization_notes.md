@@ -1150,3 +1150,5 @@
 
 * [2026-10-30 02:53:16] update applied to internal configs (Ref: 7c415016-25)
 
+* [2026-10-30 02:53:16] improve applied to module structure (Ref: 7c415016-26)
+
