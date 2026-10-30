@@ -566,3 +566,5 @@
 
 * [2026-10-29 21:33:42] improve applied to internal configs (Ref: cf2af4a1-33)
 
+* [2026-10-29 21:33:42] update applied to type hints (Ref: cf2af4a1-34)
+
