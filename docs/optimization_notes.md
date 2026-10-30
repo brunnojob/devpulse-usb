@@ -352,3 +352,5 @@
 
 * [2026-10-29 21:32:40] improve applied to module structure (Ref: 320bd28b-26)
 
+* [2026-10-29 21:32:41] update applied to internal configs (Ref: 320bd28b-27)
+
