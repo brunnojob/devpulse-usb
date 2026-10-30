@@ -144,3 +144,5 @@
 
 * [2026-10-29 21:31:36] clean applied to internal configs (Ref: 68da01c0-22)
 
+* [2026-10-29 21:31:36] clean applied to inline comments (Ref: 68da01c0-23)
+
