@@ -200,3 +200,5 @@
 
 * [2026-10-29 21:31:42] clean applied to utilities (Ref: 68da01c0-50)
 
+* [2026-10-29 21:31:57] update applied to inline comments (Ref: 04e287a7-1)
+
