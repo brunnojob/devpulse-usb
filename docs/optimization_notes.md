@@ -586,3 +586,5 @@
 
 * [2026-10-29 21:33:44] clean applied to utilities (Ref: cf2af4a1-43)
 
+* [2026-10-29 21:33:44] update applied to inline comments (Ref: cf2af4a1-44)
+
