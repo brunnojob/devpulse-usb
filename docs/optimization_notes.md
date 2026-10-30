@@ -266,3 +266,5 @@
 
 * [2026-10-29 21:32:05] update applied to utilities (Ref: 04e287a7-33)
 
+* [2026-10-29 21:32:05] clean applied to internal configs (Ref: 04e287a7-34)
+
