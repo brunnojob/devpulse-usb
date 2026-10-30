@@ -464,3 +464,5 @@
 
 * [2026-10-29 21:33:13] format applied to inline comments (Ref: 48fcd25d-32)
 
+* [2026-10-29 21:33:13] format applied to internal configs (Ref: 48fcd25d-33)
+
