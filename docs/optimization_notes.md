@@ -502,3 +502,5 @@
 
 * [2026-10-29 21:33:30] format applied to inline comments (Ref: cf2af4a1-1)
 
+* [2026-10-29 21:33:30] format applied to internal configs (Ref: cf2af4a1-2)
+
