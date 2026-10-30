@@ -300,3 +300,5 @@
 
 * [2026-10-29 21:32:09] format applied to module structure (Ref: 04e287a7-50)
 
+* [2026-10-29 21:32:31] format applied to utilities (Ref: 320bd28b-1)
+
