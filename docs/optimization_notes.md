@@ -952,3 +952,5 @@
 
 * [2026-10-30 02:52:22] format applied to utilities (Ref: f86c359c-26)
 
+* [2026-10-30 02:52:23] improve applied to inline comments (Ref: f86c359c-27)
+
