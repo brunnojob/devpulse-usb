@@ -572,3 +572,5 @@
 
 * [2026-10-29 21:33:42] update applied to internal configs (Ref: cf2af4a1-36)
 
+* [2026-10-29 21:33:43] improve applied to inline comments (Ref: cf2af4a1-37)
+
