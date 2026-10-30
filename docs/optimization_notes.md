@@ -772,3 +772,5 @@
 
 * [2026-10-30 02:51:39] optimize applied to utilities (Ref: cfb868ff-36)
 
+* [2026-10-30 02:51:39] update applied to internal configs (Ref: cfb868ff-37)
+
