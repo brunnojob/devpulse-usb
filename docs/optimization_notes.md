@@ -70,3 +70,5 @@
 
 * [2026-10-29 21:31:04] format applied to internal configs (Ref: d9b3d005-35)
 
+* [2026-10-29 21:31:04] update applied to inline comments (Ref: d9b3d005-36)
+
