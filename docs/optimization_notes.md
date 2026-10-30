@@ -496,3 +496,5 @@
 
 * [2026-10-29 21:33:17] optimize applied to module structure (Ref: 48fcd25d-48)
 
+* [2026-10-29 21:33:17] improve applied to internal configs (Ref: 48fcd25d-49)
+
