@@ -504,3 +504,5 @@
 
 * [2026-10-29 21:33:30] format applied to internal configs (Ref: cf2af4a1-2)
 
+* [2026-10-29 21:33:31] improve applied to utilities (Ref: cf2af4a1-3)
+
