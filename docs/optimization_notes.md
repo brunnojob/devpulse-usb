@@ -570,3 +570,5 @@
 
 * [2026-10-29 21:33:42] optimize applied to module structure (Ref: cf2af4a1-35)
 
+* [2026-10-29 21:33:42] update applied to internal configs (Ref: cf2af4a1-36)
+
