@@ -1052,3 +1052,5 @@
 
 * [2026-10-30 02:52:49] optimize applied to internal configs (Ref: 1e5503e9-26)
 
+* [2026-10-30 02:52:50] clean applied to internal configs (Ref: 1e5503e9-27)
+
