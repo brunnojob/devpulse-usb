@@ -550,3 +550,5 @@
 
 * [2026-10-29 21:33:38] clean applied to inline comments (Ref: cf2af4a1-25)
 
+* [2026-10-29 21:33:38] improve applied to internal configs (Ref: cf2af4a1-26)
+
