@@ -1144,3 +1144,5 @@
 
 * [2026-10-30 02:53:15] update applied to type hints (Ref: 7c415016-22)
 
+* [2026-10-30 02:53:16] format applied to utilities (Ref: 7c415016-23)
+
