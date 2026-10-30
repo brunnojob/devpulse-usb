@@ -80,3 +80,5 @@
 
 * [2026-10-29 21:31:05] update applied to internal configs (Ref: d9b3d005-40)
 
+* [2026-10-29 21:31:05] format applied to type hints (Ref: d9b3d005-41)
+
