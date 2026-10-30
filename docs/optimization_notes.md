@@ -978,3 +978,5 @@
 
 * [2026-10-30 02:52:28] improve applied to type hints (Ref: f86c359c-39)
 
+* [2026-10-30 02:52:28] improve applied to internal configs (Ref: f86c359c-40)
+
