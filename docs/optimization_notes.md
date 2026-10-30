@@ -42,3 +42,5 @@
 
 * [2026-10-29 21:31:01] clean applied to internal configs (Ref: d9b3d005-21)
 
+* [2026-10-29 21:31:01] clean applied to utilities (Ref: d9b3d005-22)
+
