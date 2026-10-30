@@ -450,3 +450,5 @@
 
 * [2026-10-29 21:33:12] improve applied to internal configs (Ref: 48fcd25d-25)
 
+* [2026-10-29 21:33:12] update applied to utilities (Ref: 48fcd25d-26)
+
