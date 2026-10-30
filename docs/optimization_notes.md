@@ -136,3 +136,5 @@
 
 * [2026-10-29 21:31:35] optimize applied to utilities (Ref: 68da01c0-18)
 
+* [2026-10-29 21:31:35] clean applied to module structure (Ref: 68da01c0-19)
+
