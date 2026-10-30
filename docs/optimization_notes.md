@@ -304,3 +304,5 @@
 
 * [2026-10-29 21:32:31] improve applied to internal configs (Ref: 320bd28b-2)
 
+* [2026-10-29 21:32:31] update applied to utilities (Ref: 320bd28b-3)
+
