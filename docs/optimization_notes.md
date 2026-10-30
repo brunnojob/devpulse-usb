@@ -122,3 +122,5 @@
 
 * [2026-10-29 21:31:34] improve applied to type hints (Ref: 68da01c0-11)
 
+* [2026-10-29 21:31:34] update applied to utilities (Ref: 68da01c0-12)
+
