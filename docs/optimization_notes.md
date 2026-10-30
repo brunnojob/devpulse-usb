@@ -746,3 +746,5 @@
 
 * [2026-10-30 02:51:36] format applied to internal configs (Ref: cfb868ff-23)
 
+* [2026-10-30 02:51:36] format applied to inline comments (Ref: cfb868ff-24)
+
