@@ -974,3 +974,5 @@
 
 * [2026-10-30 02:52:28] clean applied to internal configs (Ref: f86c359c-37)
 
+* [2026-10-30 02:52:28] improve applied to module structure (Ref: f86c359c-38)
+
