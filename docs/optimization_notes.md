@@ -908,3 +908,5 @@
 
 * [2026-10-30 02:52:16] optimize applied to utilities (Ref: f86c359c-4)
 
+* [2026-10-30 02:52:16] improve applied to internal configs (Ref: f86c359c-5)
+
