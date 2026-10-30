@@ -980,3 +980,5 @@
 
 * [2026-10-30 02:52:28] improve applied to internal configs (Ref: f86c359c-40)
 
+* [2026-10-30 02:52:29] update applied to module structure (Ref: f86c359c-41)
+
