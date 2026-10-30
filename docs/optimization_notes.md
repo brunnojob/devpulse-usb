@@ -102,3 +102,5 @@
 
 * [2026-10-29 21:31:32] optimize applied to module structure (Ref: 68da01c0-1)
 
+* [2026-10-29 21:31:32] clean applied to internal configs (Ref: 68da01c0-2)
+
