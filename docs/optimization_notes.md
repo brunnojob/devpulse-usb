@@ -674,3 +674,5 @@
 
 * [2026-10-30 02:51:15] format applied to utilities (Ref: 2051a3e1-37)
 
+* [2026-10-30 02:51:15] improve applied to internal configs (Ref: 2051a3e1-38)
+
