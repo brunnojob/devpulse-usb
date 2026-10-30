@@ -950,3 +950,5 @@
 
 * [2026-10-30 02:52:22] clean applied to internal configs (Ref: f86c359c-25)
 
+* [2026-10-30 02:52:22] format applied to utilities (Ref: f86c359c-26)
+
