@@ -948,3 +948,5 @@
 
 * [2026-10-30 02:52:22] clean applied to module structure (Ref: f86c359c-24)
 
+* [2026-10-30 02:52:22] clean applied to internal configs (Ref: f86c359c-25)
+
