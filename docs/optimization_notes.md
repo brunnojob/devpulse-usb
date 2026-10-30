@@ -744,3 +744,5 @@
 
 * [2026-10-30 02:51:36] optimize applied to inline comments (Ref: cfb868ff-22)
 
+* [2026-10-30 02:51:36] format applied to internal configs (Ref: cfb868ff-23)
+
