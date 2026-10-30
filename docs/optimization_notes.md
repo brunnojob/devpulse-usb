@@ -534,3 +534,5 @@
 
 * [2026-10-29 21:33:35] clean applied to utilities (Ref: cf2af4a1-17)
 
+* [2026-10-29 21:33:35] format applied to inline comments (Ref: cf2af4a1-18)
+
