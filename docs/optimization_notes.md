@@ -40,3 +40,5 @@
 
 * [2026-10-29 21:31:01] improve applied to internal configs (Ref: d9b3d005-20)
 
+* [2026-10-29 21:31:01] clean applied to internal configs (Ref: d9b3d005-21)
+
