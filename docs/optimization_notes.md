@@ -326,3 +326,5 @@
 
 * [2026-10-29 21:32:35] improve applied to type hints (Ref: 320bd28b-13)
 
+* [2026-10-29 21:32:35] format applied to utilities (Ref: 320bd28b-14)
+
