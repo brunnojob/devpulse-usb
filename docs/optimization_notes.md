@@ -632,3 +632,5 @@
 
 * [2026-10-30 02:51:11] improve applied to internal configs (Ref: 2051a3e1-16)
 
+* [2026-10-30 02:51:11] update applied to module structure (Ref: 2051a3e1-17)
+
