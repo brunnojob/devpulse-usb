@@ -672,3 +672,5 @@
 
 * [2026-10-30 02:51:15] update applied to type hints (Ref: 2051a3e1-36)
 
+* [2026-10-30 02:51:15] format applied to utilities (Ref: 2051a3e1-37)
+
