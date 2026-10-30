@@ -498,3 +498,5 @@
 
 * [2026-10-29 21:33:17] improve applied to internal configs (Ref: 48fcd25d-49)
 
+* [2026-10-29 21:33:17] clean applied to type hints (Ref: 48fcd25d-50)
+
