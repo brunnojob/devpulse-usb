@@ -384,3 +384,5 @@
 
 * [2026-10-29 21:32:44] format applied to module structure (Ref: 320bd28b-42)
 
+* [2026-10-29 21:32:44] improve applied to inline comments (Ref: 320bd28b-43)
+
