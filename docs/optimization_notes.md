@@ -914,3 +914,5 @@
 
 * [2026-10-30 02:52:17] clean applied to utilities (Ref: f86c359c-7)
 
+* [2026-10-30 02:52:17] improve applied to internal configs (Ref: f86c359c-8)
+
