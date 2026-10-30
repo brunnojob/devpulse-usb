@@ -960,3 +960,5 @@
 
 * [2026-10-30 02:52:23] clean applied to internal configs (Ref: f86c359c-30)
 
+* [2026-10-30 02:52:23] clean applied to inline comments (Ref: f86c359c-31)
+
