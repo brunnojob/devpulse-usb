@@ -730,3 +730,5 @@
 
 * [2026-10-30 02:51:34] clean applied to utilities (Ref: cfb868ff-15)
 
+* [2026-10-30 02:51:35] format applied to utilities (Ref: cfb868ff-16)
+
