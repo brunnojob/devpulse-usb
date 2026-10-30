@@ -652,3 +652,5 @@
 
 * [2026-10-30 02:51:12] optimize applied to type hints (Ref: 2051a3e1-26)
 
+* [2026-10-30 02:51:13] improve applied to internal configs (Ref: 2051a3e1-27)
+
