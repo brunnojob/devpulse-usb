@@ -818,3 +818,5 @@
 
 * [2026-10-30 02:51:54] format applied to internal configs (Ref: b889b6cf-9)
 
+* [2026-10-30 02:51:54] improve applied to inline comments (Ref: b889b6cf-10)
+
