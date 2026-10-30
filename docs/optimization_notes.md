@@ -302,3 +302,5 @@
 
 * [2026-10-29 21:32:31] format applied to utilities (Ref: 320bd28b-1)
 
+* [2026-10-29 21:32:31] improve applied to internal configs (Ref: 320bd28b-2)
+
