@@ -888,3 +888,5 @@
 
 * [2026-10-30 02:52:02] format applied to utilities (Ref: b889b6cf-44)
 
+* [2026-10-30 02:52:02] format applied to internal configs (Ref: b889b6cf-45)
+
