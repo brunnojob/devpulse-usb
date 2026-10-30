@@ -890,3 +890,5 @@
 
 * [2026-10-30 02:52:02] format applied to internal configs (Ref: b889b6cf-45)
 
+* [2026-10-30 02:52:03] clean applied to inline comments (Ref: b889b6cf-46)
+
