@@ -558,3 +558,5 @@
 
 * [2026-10-29 21:33:39] update applied to type hints (Ref: cf2af4a1-29)
 
+* [2026-10-29 21:33:39] improve applied to utilities (Ref: cf2af4a1-30)
+
