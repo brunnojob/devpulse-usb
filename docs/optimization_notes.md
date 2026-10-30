@@ -30,3 +30,5 @@
 
 * [2026-10-29 21:31:00] format applied to utilities (Ref: d9b3d005-15)
 
+* [2026-10-29 21:31:00] improve applied to module structure (Ref: d9b3d005-16)
+
