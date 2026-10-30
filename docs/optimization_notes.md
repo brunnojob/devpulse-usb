@@ -56,3 +56,5 @@
 
 * [2026-10-29 21:31:03] format applied to internal configs (Ref: d9b3d005-28)
 
+* [2026-10-29 21:31:03] clean applied to inline comments (Ref: d9b3d005-29)
+
