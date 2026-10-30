@@ -206,3 +206,5 @@
 
 * [2026-10-29 21:31:58] clean applied to internal configs (Ref: 04e287a7-3)
 
+* [2026-10-29 21:31:58] format applied to utilities (Ref: 04e287a7-4)
+
