@@ -472,3 +472,5 @@
 
 * [2026-10-29 21:33:14] update applied to utilities (Ref: 48fcd25d-36)
 
+* [2026-10-29 21:33:14] update applied to internal configs (Ref: 48fcd25d-37)
+
