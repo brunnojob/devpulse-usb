@@ -756,3 +756,5 @@
 
 * [2026-10-30 02:51:37] format applied to internal configs (Ref: cfb868ff-28)
 
+* [2026-10-30 02:51:37] format applied to module structure (Ref: cfb868ff-29)
+
