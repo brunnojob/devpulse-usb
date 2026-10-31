@@ -1470,3 +1470,5 @@
 
 * [2026-10-31 01:23:31] improve applied to module structure (Ref: 5239ab25-35)
 
+* [2026-10-31 01:23:31] format applied to module structure (Ref: 5239ab25-36)
+
