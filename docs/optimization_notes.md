@@ -1724,3 +1724,5 @@
 
 * [2026-10-31 01:24:30] improve applied to internal configs (Ref: 91468a28-12)
 
+* [2026-10-31 01:24:31] update applied to module structure (Ref: 91468a28-13)
+
