@@ -1372,3 +1372,5 @@
 
 * [2026-10-31 01:23:11] update applied to type hints (Ref: 47462a7b-36)
 
+* [2026-10-31 01:23:11] optimize applied to internal configs (Ref: 47462a7b-37)
+
