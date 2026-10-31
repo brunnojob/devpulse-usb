@@ -1422,3 +1422,5 @@
 
 * [2026-10-31 01:23:27] update applied to utilities (Ref: 5239ab25-11)
 
+* [2026-10-31 01:23:27] improve applied to inline comments (Ref: 5239ab25-12)
+
