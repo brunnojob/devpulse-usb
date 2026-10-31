@@ -1570,3 +1570,5 @@
 
 * [2026-10-31 01:23:53] improve applied to internal configs (Ref: 7a113edd-35)
 
+* [2026-10-31 01:23:54] format applied to inline comments (Ref: 7a113edd-36)
+
