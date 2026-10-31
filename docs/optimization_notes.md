@@ -1468,3 +1468,5 @@
 
 * [2026-10-31 01:23:31] update applied to internal configs (Ref: 5239ab25-34)
 
+* [2026-10-31 01:23:31] improve applied to module structure (Ref: 5239ab25-35)
+
