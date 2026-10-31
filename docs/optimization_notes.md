@@ -1788,3 +1788,5 @@
 
 * [2026-10-31 01:24:36] update applied to utilities (Ref: 91468a28-44)
 
+* [2026-10-31 01:24:36] improve applied to internal configs (Ref: 91468a28-45)
+
