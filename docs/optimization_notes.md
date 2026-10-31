@@ -1790,3 +1790,5 @@
 
 * [2026-10-31 01:24:36] improve applied to internal configs (Ref: 91468a28-45)
 
+* [2026-10-31 01:24:36] format applied to internal configs (Ref: 91468a28-46)
+
