@@ -1672,3 +1672,5 @@
 
 * [2026-10-31 01:24:14] clean applied to utilities (Ref: a3b25e45-36)
 
+* [2026-10-31 01:24:14] clean applied to module structure (Ref: a3b25e45-37)
+
