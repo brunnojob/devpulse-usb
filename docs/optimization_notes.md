@@ -1260,3 +1260,5 @@
 
 * [2026-10-31 01:22:50] improve applied to module structure (Ref: a11d2c87-30)
 
+* [2026-10-31 01:22:50] format applied to internal configs (Ref: a11d2c87-31)
+
