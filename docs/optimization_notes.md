@@ -1332,3 +1332,5 @@
 
 * [2026-10-31 01:23:07] improve applied to internal configs (Ref: 47462a7b-16)
 
+* [2026-10-31 01:23:07] improve applied to module structure (Ref: 47462a7b-17)
+
