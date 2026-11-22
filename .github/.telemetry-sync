@@ -1,4 +1,4 @@
 date=2026-11-22
-seq=511
-ts=1795318341
-scope=serial-port
+seq=512
+ts=1795318346
+scope=daemon
