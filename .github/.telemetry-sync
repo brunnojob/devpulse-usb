@@ -1,4 +1,4 @@
 date=2026-11-22
-seq=965
-ts=1795319921
-scope=serial-port
+seq=966
+ts=1795319933
+scope=hid-poll
