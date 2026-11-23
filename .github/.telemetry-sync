@@ -1,4 +1,4 @@
 date=2026-11-23
-seq=853
-ts=1795452477
-scope=daemon
+seq=854
+ts=1795452488
+scope=hid-poll
