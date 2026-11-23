@@ -1,4 +1,4 @@
 date=2026-11-23
-seq=255
-ts=1795448460
-scope=serial-port
+seq=256
+ts=1795448475
+scope=telemetry
