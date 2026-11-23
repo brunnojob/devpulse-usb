@@ -1,4 +1,4 @@
 date=2026-11-23
-seq=256
-ts=1795448475
-scope=telemetry
+seq=257
+ts=1795448481
+scope=daemon
