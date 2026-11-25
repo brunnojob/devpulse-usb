@@ -1,4 +1,4 @@
 date=2026-11-25
-seq=249
-ts=1795576778
-scope=telemetry
+seq=250
+ts=1795576783
+scope=hid-poll
